@@ -39,7 +39,6 @@ class NoteInput extends React.Component {
     onSubmitEventHandler(event) {
         event.preventDefault();
         this.props.addNote(this.state);
-        alert("Sukses");
     }
 
     render() {
@@ -49,9 +48,9 @@ class NoteInput extends React.Component {
                     <label htmlFor="title">Judul</label>
                     <p>{this.state.remainingChars} / 50</p>
                 </div>
-                <input type="text" id="title" value={this.state.title} onChange={this.onTitleChangeEventHandler} maxLength={50} />
+                <input type="text" id="title" required value={this.state.title} onChange={this.onTitleChangeEventHandler} maxLength={50} />
                 <label htmlFor="body">Teks</label>
-                <textarea id="body" cols="30" rows="10" value={this.state.body} onChange={this.onBodyChangeEventHandler} ></textarea>
+                <textarea id="body" required cols="30" rows="10" value={this.state.body} onChange={this.onBodyChangeEventHandler} ></textarea>
                 <button type="submit">Submit</button>
             </form>
         );

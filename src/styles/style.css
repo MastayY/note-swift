@@ -20,6 +20,7 @@ body {
 .notes-app {
     max-width: 800px;
     margin: 0 auto;
+    padding: 5px 20px;
 }
 
 main  h1 {
@@ -105,9 +106,7 @@ main h2 {
 }
 
 .note-item__header {
-    display: grid;
-    grid-template-columns: 60% 40%;
-    margin: 10px 0;
+    margin: 8px 0;
     padding-bottom: 10px;
 }
 
@@ -115,7 +114,6 @@ main h2 {
     margin-top: 10px;
     font-size: 14px;
     color: var(--gray);
-    text-align: right;
 }
 
 .note-item__header h3 {
@@ -158,4 +156,14 @@ main h2 {
 .action-button button:hover {
     background-color: var(--black);
     color: var(--white);
+}
+
+.action-button button.action-button__delete:hover {
+    background-color: #b90a0a;
+    color: var(--white);
+    border: 2px solid #b90a0a;
+}
+
+.action-button button i {
+    font-size: 20px;
 }
